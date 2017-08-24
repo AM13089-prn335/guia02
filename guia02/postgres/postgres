@@ -1,0 +1,11 @@
+FROM postgresql:9.6.3-alpine
+EVN POSTGRES_USER='mortal2017'
+EVN POSTGRES_PASSWORD ='prn335'
+EVN POSTGRES_DB='post'
+EXPOSE 5432
+entrypoint 
+    -payara41/bin/asadmin
+    -start-domain
+     - -v
+
+CMD [ postgres]

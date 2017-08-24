@@ -1,0 +1,24 @@
+   version: '2'
+   services:
+
+   image:'postgres-imagen'
+   buil:./postgres/.
+   container name .'psqlalpine-prn335'
+   post:
+   -'5432:5432'
+
+   volumes:
+   -/db:var/lib/posgresql/data
+
+  image:'payara-imagen'
+   buil:./payara/.
+   container name .'payara-prn335'
+   post:
+   -'4848:8080'
+    entrypoint 
+    -payara41/bin/asadmin
+    -start-domain
+     - -v
+
+
+ 
